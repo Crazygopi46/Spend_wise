@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111d2d">
+  <meta name="description" content="SpendWise — your daily expense buddy. Track spending, customize categories, and make your money clearer.">
+  <title>SpendWise — Daily Expense Buddy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <a class="brand" href="#dashboard" aria-label="SpendWise dashboard"><span class="brand-mark">S</span><span>Spend<span class="brand-light">Wise</span></span></a>
+      <p class="nav-caption">WORKSPACE</p>
+      <nav class="side-nav">
+        <a class="nav-link active" href="#dashboard" data-page="dashboard"><span class="nav-icon">⌂</span>Dashboard</a>
+        <a class="nav-link" href="#transactions" data-page="transactions"><span class="nav-icon">↔</span>Transactions</a>
+        <a class="nav-link" href="#categories" data-page="categories"><span class="nav-icon">◈</span>Categories</a>
+        <a class="nav-link" href="#budgets" data-page="budgets"><span class="nav-icon">▤</span>Budgets</a>
+        <a class="nav-link" href="#reports" data-page="reports"><span class="nav-icon">▥</span>Reports</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-note"><span class="note-icon">✦</span><strong>Small steps add up.</strong><p>Keep your money goals in sight, every day.</p></div>
+        <a class="profile-chip" href="#settings" data-page="settings"><span class="avatar">Y</span><span class="profile-meta"><strong>My money space</strong><small>Stored on this device</small></span><span class="settings-glyph">⚙</span></a>
+      </div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar">
+        <button class="mobile-menu" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <div class="breadcrumb"><span>Your finances</span><b>/</b><strong id="currentPageName">Dashboard</strong></div>
+        <div class="topbar-actions"><span class="today-label" id="todayLabel"></span><button class="top-add" id="quickAdd" type="button"><span>＋</span> Add transaction</button></div>
+      </header>
+      <div class="toast-region" id="toastRegion" aria-live="polite"></div>
+      <section class="page-content" id="pageContent" tabindex="-1"></section>
+      <footer class="footer">SpendWise <span>·</span> Your daily money, made clearer. <span class="local-note">Saved privately in this browser</span></footer>
+    </main>
+  </div>
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <section class="dialog" id="dialog" role="dialog" aria-modal="true" aria-labelledby="dialogTitle" tabindex="-1"></section>
+  </div>
+</body>
+</html>
